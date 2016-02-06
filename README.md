@@ -33,6 +33,16 @@ Lettering works on Craft 2.4.x and Craft 2.5.x.
 <h1 {{ lettering.ariaLabel }}>{{ lettering.chars }}</h1>  
 ```
 
+### Output
+
+```html
+<h1 aria-label="Sanctimonious Variable Lettering">
+    <span class="word1" aria-hidden="true">Sanctimonious</span>   
+    <span class="word1" aria-hidden="true">Variable</span>  
+    <span class="word1" aria-hidden="true">Lettering’</span>  
+</h1>
+```
+
 ## Lettering Changelog
 
 ### 1.0.0 -- 2016.02.06
