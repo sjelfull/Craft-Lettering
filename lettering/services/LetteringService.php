@@ -22,7 +22,7 @@ namespace Craft;
 
 class LetteringService extends BaseApplicationComponent
 {
-    
+
     public function chars($text) {
         return $this->injector($text);
     }
@@ -35,8 +35,7 @@ class LetteringService extends BaseApplicationComponent
         return $this->injector($text, 'lines', ' ');
     }
 
-    protected function injector($text, $class = 'chars', $after = '')
-    {
+    protected function injector($text, $class = 'chars', $after = '') {
 
         switch ($class) {
             case 'words' :
