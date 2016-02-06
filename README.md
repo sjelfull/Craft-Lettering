@@ -49,4 +49,4 @@ Lettering works on Craft 2.4.x and Craft 2.5.x.
 
 * Initial release
 
-Brought to you by [Fred Carlsen](http://sjelfull.no)
+Brought to you by [Fred Carlsen](http://sjelfull.no) + [Mats Mikkel Rummelhoff](http://mmikkel.no)
