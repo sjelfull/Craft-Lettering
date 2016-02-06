@@ -15,19 +15,19 @@ Lettering works on Craft 2.4.x and Craft 2.5.x.
 
 ## Using Lettering
 
-```
+```jinja
 {{ text|lettering }}  
 {{ text|lettering('words') }}  
 {{ text|lettering('lines') }}  
 ```
 
-```
+```jinja
 {% filter lettering('words') %}  
-    <h1>Sanctimonious Variable Lettering</h1>  
+    <h1>{{ entry.title }}</h1>  
 {% endfilter %}  
 ```
 
-```
+```jinja
 {% set lettering = craft.lettering.chars(’Sanctimonious Variable Lettering’) %}  
 
 <h1 {{ lettering.ariaLabel }}>{{ lettering.chars }}</h1>  
