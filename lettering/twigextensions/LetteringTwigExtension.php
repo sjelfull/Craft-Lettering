@@ -45,21 +45,7 @@ class LetteringTwigExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'someFilter' => new \Twig_Filter_Method($this, 'someInternalFunction'),
-        );
-    }
-
-    /**
-     * Returns an array of Twig functions, used in Twig templates via:
-     *
-     *      {% set this = someFunction('something') %}
-     *
-     * @return array
-     */
-    public function getFunctions()
-    {
-        return array(
-            'someFunction' => new \Twig_Function_Method($this, 'someInternalFunction'),
+            'lettering' => new \Twig_Filter_Method($this, 'lettering'),
         );
     }
 
@@ -68,10 +54,10 @@ class LetteringTwigExtension extends \Twig_Extension
      *
      * @return string
      */
-    public function someInternalFunction($text = null)
+    public function lettering($text = null, $class = 'chars')
     {
-        $result = $text . " in the way";
-
-        return $result;
+        $result = method_exists(craft()->lettering, $class) ? craft()->lettering->$class($text) : null;
+        return $result ? $result[$class] : $text;
     }
+
 }

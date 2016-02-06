@@ -22,26 +22,25 @@ namespace Craft;
 
 class LetteringVariable
 {
+
+    public function lettering($text)
+    {
+        return craft()->lettering->chars($text);
+    }
+
+    public function chars($text)
+    {
+        return craft()->lettering->chars($text);
+    }
+    
     public function words($text)
     {
-        $parts = explode(' ', trim($text));
-        $count = 1;
-
-        $formattedParts = array_map(function($word) use (&$count) {
-            $word = '<span class="word' . $count . '" aria-hidden="true">' . $word . '</span> ';
-            $count = $count + 1;
-
-            return $word;
-        }, $parts);
-
-        $ariaLabel = TemplateHelper::getRaw(' aria-label="'. $text .'"');
-        $words = TemplateHelper::getRaw( implode('', $formattedParts) );
-        $result = [
-            'original' => $text,
-            'ariaLabel' => $ariaLabel,
-            'words' => $words,
-        ];
-
-        return $result;
+        return craft()->lettering->words($text);
     }
+
+    public function lines($text)
+    {
+        return craft()->lettering->lines($text);
+    }
+
 }
