@@ -22,21 +22,15 @@ Lettering works on Craft 2.4.x and Craft 2.5.x.
 ```
 
 ```
-{% set lettering = craft.lettering.chars(’Sanctimonious Variable Lettering’) %}
-
-<h1 {{ lettering.ariaLabel }}>{{ lettering.chars }}</h1>
+{% filter lettering('words') %}  
+    <h1>Sanctimonious Variable Lettering</h1>  
+{% endfilter %}  
 ```
 
 ```
-{% set lettering = craft.lettering.words(’Sanctimonious Variable Lettering’) %}
+{% set lettering = craft.lettering.chars(’Sanctimonious Variable Lettering’) %}  
 
-<h1 {{ lettering.ariaLabel }}>{{ lettering.words }}</h1>
-```
-
-```
-{% set lettering = craft.lettering.lines(’Sanctimonious Variable Lettering’) %}
-
-<h1 {{ lettering.ariaLabel }}>{{ lettering.lines }}</h1>
+<h1 {{ lettering.ariaLabel }}>{{ lettering.chars }}</h1>  
 ```
 
 ## Lettering Changelog
