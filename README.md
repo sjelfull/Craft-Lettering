@@ -16,9 +16,27 @@ Lettering works on Craft 2.4.x and Craft 2.5.x.
 ## Using Lettering
 
 ```
+{{ text|lettering }}  
+{{ text|lettering('words') }}  
+{{ text|lettering('lines') }}  
+```
+
+```
+{% set lettering = craft.lettering.chars(’Sanctimonious Variable Lettering’) %}
+
+<h1 {{ lettering.ariaLabel }}>{{ lettering.chars }}</h1>
+```
+
+```
 {% set lettering = craft.lettering.words(’Sanctimonious Variable Lettering’) %}
 
 <h1 {{ lettering.ariaLabel }}>{{ lettering.words }}</h1>
+```
+
+```
+{% set lettering = craft.lettering.lines(’Sanctimonious Variable Lettering’) %}
+
+<h1 {{ lettering.ariaLabel }}>{{ lettering.lines }}</h1>
 ```
 
 ## Lettering Changelog

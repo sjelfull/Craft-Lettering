@@ -58,7 +58,7 @@ class LetteringService extends BaseApplicationComponent
             return $part;
         }, $parts);
 
-        $ariaLabel = TemplateHelper::getRaw(' aria-label="'. $text .'"');
+        $ariaLabel = TemplateHelper::getRaw(' aria-label="'. trim(strip_tags($text)) .'"');
         $joined = TemplateHelper::getRaw( implode('', $formattedParts) );
         
         $result = [
