@@ -1,6 +1,6 @@
 # Lettering plugin for Craft CMS
 
-Lettering.js port for Craft
+[Lettering.js](http://letteringjs.com/) port for Craft
 
 ## Installation
 
