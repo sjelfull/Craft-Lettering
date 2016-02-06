@@ -38,8 +38,8 @@ Lettering works on Craft 2.4.x and Craft 2.5.x.
 ```html
 <h1 aria-label="Sanctimonious Variable Lettering">
     <span class="word1" aria-hidden="true">Sanctimonious</span>   
-    <span class="word1" aria-hidden="true">Variable</span>  
-    <span class="word1" aria-hidden="true">Lettering’</span>  
+    <span class="word2" aria-hidden="true">Variable</span>  
+    <span class="word3" aria-hidden="true">Lettering’</span>  
 </h1>
 ```
 
